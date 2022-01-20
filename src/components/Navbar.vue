@@ -11,6 +11,11 @@ import Logo from "./Logo.vue"
 
 const openModalSearch = ref(false)
 const sidebar = ref(false)
+const query = ref("")
+
+const clearSearchInput = () => {
+    query.value = ""
+}
 </script>
 <template>
     <div
@@ -64,18 +69,18 @@ const sidebar = ref(false)
                                 >
                                     <!-- prettier-ignore -->
                                     <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-												<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-											</svg>
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+									</svg>
                                     <input
                                         type="text"
                                         class="bg-transparent focus:outline-none focus:ring-0 w-full text-sm"
                                         placeholder="Search post . . ."
-                                        ref="search"
+                                        v-model="query"
                                     />
                                     <!-- prettier-ignore -->
-                                    <svg @click="$refs.search.value = ''" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-												<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-											</svg>
+                                    <svg @click="clearSearchInput" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+									</svg>
                                 </div>
                             </div>
                         </TransitionChild>
