@@ -1,18 +1,18 @@
-<script setup lang="ts">
+<script lang="ts" setup>
 const props = defineProps<{ to: string }>()
 </script>
 <template>
-    <div>
-        <router-link :to="to">
+    <router-link :to="to">
+        <span>
             <slot></slot>
-        </router-link>
-    </div>
+        </span>
+    </router-link>
 </template>
 <style scoped>
-.router-link-active {
+.router-link-active span {
     @apply font-semibold relative;
 }
-.router-link-active::after {
+.router-link-active span::after {
     content: "";
     @apply absolute -bottom-1 left-0 w-1/2 h-[2px] bg-blue-500 rounded;
 }

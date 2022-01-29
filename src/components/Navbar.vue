@@ -6,9 +6,8 @@ import {
     Dialog,
     DialogOverlay,
 } from "@headlessui/vue"
-import NavLink from "./NavLink.vue"
 import Logo from "./Logo.vue"
-
+import NavLink from "./NavLink.vue"
 const openModalSearch = ref(false)
 const sidebar = ref(false)
 const query = ref("")
@@ -19,7 +18,7 @@ const clearSearchInput = () => {
 </script>
 <template>
     <div
-        class="flex items-center justify-between py-2 border-b border-gray-300 fixed bg-white container mx-auto left-0 right-0"
+        class="flex items-center justify-between py-2 border-b border-gray-300 fixed bg-white container mx-auto left-0 right-0 z-10"
     >
         <div @click="sidebar = true">
             <!-- prettier-ignore -->
@@ -124,10 +123,10 @@ const clearSearchInput = () => {
                                     <Logo />
                                     <!-- prettier-ignore -->
                                     <svg @click="sidebar = false" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-												<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-											</svg>
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+									</svg>
                                 </div>
-                                <div class="mt-4 space-y-3 px-2">
+                                <div class="mt-4 space-y-3 px-2 flex flex-col">
                                     <NavLink
                                         to="/"
                                         exact
@@ -140,7 +139,7 @@ const clearSearchInput = () => {
                                         >About</NavLink
                                     >
                                     <NavLink
-                                        to="/disclamer"
+                                        to="/disclaimer"
                                         @click="sidebar = false"
                                         >Disclaimer</NavLink
                                     >

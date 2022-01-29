@@ -1,10 +1,15 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import VLazyImage from "v-lazy-image"
+</script>
 <template>
     <div>
-        <!-- prettier-ignore -->
         <router-link to="/post/1">
-			<img src="../assets/article.png" alt="t" class="w-full max-h-52 object-cover object-center rounded-xl" />
-		</router-link>
+            <v-lazy-image
+                src="src/assets/article.png"
+                alt="t"
+                class="w-full max-h-52 object-cover object-center rounded-xl"
+            />
+        </router-link>
         <div class="py-2 space-y-1">
             <router-link to="/post/1" class="font-semibold leading-5">
                 Lorem ipsum dolor sit amet.
@@ -31,3 +36,14 @@
         </div>
     </div>
 </template>
+<style scoped>
+.v-lazy-image {
+    @apply blur-lg transition-all duration-500;
+}
+.v-lazy-image-loaded {
+    @apply blur-none
+    /* filter: blur(5px);
+    transition: filter 1.6s;
+    will-change: filter; */;
+}
+</style>

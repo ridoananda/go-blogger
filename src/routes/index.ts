@@ -1,35 +1,30 @@
 import { createRouter, createWebHashHistory, RouteRecordRaw } from "vue-router"
-import Home from "../views/Home.vue"
-import About from "../views/About.vue"
-import Disclaimer from "../views/Disclaimer.vue"
-import Contact from "../views/Contact.vue"
-import PostDetail from "../views/post/Detail.vue"
 
 const routes: Array<RouteRecordRaw> = [
     {
         path: "/",
         name: "Home",
-        component: Home,
+        component: () => import("../views/Home.vue"),
     },
     {
         path: "/about",
         name: "About",
-        component: About,
+        component: () => import("../views/About.vue"),
     },
     {
         path: "/disclaimer",
         name: "Disclaimer",
-        component: Disclaimer,
+        component: () => import("../views/Disclaimer.vue"),
     },
     {
         path: "/contact",
         name: "Contact",
-        component: Contact,
+        component: () => import("../views/Contact.vue"),
     },
     {
         path: "/post/:id",
         name: "PostDetail",
-        component: PostDetail,
+        component: () => import("../views/post/Detail.vue"),
     },
 ]
 
