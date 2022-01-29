@@ -16,11 +16,7 @@
             <router-link to="/post/1"> 9 January 2022 </router-link>
         </div>
         <div>
-            <img
-                src="../../assets/article.png"
-                alt="title"
-                class="w-full rounded-xl"
-            />
+            <img src="/article.png" alt="title" class="w-full rounded-xl" />
         </div>
         <p class="my-2 text-gray-700 leading-relaxed">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque

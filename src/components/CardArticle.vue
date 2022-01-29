@@ -5,7 +5,7 @@ import VLazyImage from "v-lazy-image"
     <div>
         <router-link to="/post/1">
             <v-lazy-image
-                src="src/assets/article.png"
+                src="/article.png"
                 alt="t"
                 class="w-full max-h-52 object-cover object-center rounded-xl"
             />
