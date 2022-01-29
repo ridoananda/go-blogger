@@ -1,3 +1,6 @@
+<script lang="ts" setup>
+import Article from "../../assets/article.png"
+</script>
 <template>
     <div class="container md:w-10/12 lg:w-8/12 xl:w-6/12">
         <h3 class="font-bold text-lg leading-snug">
@@ -16,7 +19,7 @@
             <router-link to="/post/1"> 9 January 2022 </router-link>
         </div>
         <div>
-            <img src="article.png" alt="title" class="w-full rounded-xl" />
+            <img :src="Article" alt="title" class="w-full rounded-xl" />
         </div>
         <p class="my-2 text-gray-700 leading-relaxed">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque

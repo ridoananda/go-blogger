@@ -1,11 +1,12 @@
 <script setup lang="ts">
 import VLazyImage from "v-lazy-image"
+import Article from "../assets/article.png"
 </script>
 <template>
     <div>
         <router-link to="/post/1">
             <v-lazy-image
-                src="/article.png"
+                :src="Article"
                 alt="t"
                 class="w-full max-h-52 object-cover object-center rounded-xl"
             />
